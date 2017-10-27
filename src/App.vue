@@ -10,9 +10,9 @@
 
 
     </div>
-    <div style='margin-left:1000px;'>
-      <button @click='uvecajDesno'>rokaj desno</button>
-      <button @click='uvecajDole'>rokaj dole</button>
+    <div>
+      <input type='text' autofocus @keyup.right='uvecajDesno' @keyup.down='uvecajDole'  @keyup.left='smanjiDesno'  @keyup.up='smanjiDole'>
+
   </div>
 </div>
 </template>
@@ -33,6 +33,12 @@ export default {
     },
     uvecajDole: function(){
       this.dole+=100;
+    },
+    smanjiDesno: function(){
+      this.desno-=100;
+    },
+    smanjiDole: function(){
+      this.dole-=100;
     }
   },
 
